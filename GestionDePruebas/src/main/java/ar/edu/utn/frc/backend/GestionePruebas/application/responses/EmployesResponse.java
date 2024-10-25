@@ -8,15 +8,15 @@ public class EmployesResponse {
     int id;
     String name;
     String surname;
-    int phoneNumber;
+    int phoneContact;
 
     public EmployesResponse() {}
 
-    public EmployesResponse(int id, String name, String surname, int phoneNumber) {
+    public EmployesResponse(int id, String name, String surname, int phoneContact) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.phoneNumber = phoneNumber;
+        this.phoneContact = phoneContact;
     }
 
     public static EmployesResponse from(Employes empleado) {

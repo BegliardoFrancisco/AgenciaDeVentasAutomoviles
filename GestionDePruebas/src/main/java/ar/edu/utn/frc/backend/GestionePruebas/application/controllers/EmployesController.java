@@ -20,7 +20,7 @@ import java.util.NoSuchElementException;
 @RequestMapping("/api/v1/employes")
 public class EmployesController {
 
-    private final EmpleadoService empleadoService;
+    private final EmpleadoService<Employes> empleadoService;
 
     @GetMapping
     public ResponseEntity<List<EmployesResponse>> getall() {

@@ -5,18 +5,15 @@ import ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces.Emplead
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import javax.lang.model.element.TypeElement;
-import javax.lang.model.type.ErrorType;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 
 @RequiredArgsConstructor
 @Service
-public class EmpleadoServiceImpl implements EmpleadoService {
+public class EmpleadoServiceImpl implements EmpleadoService<Employes> {
 
-    private final EmpleadoRepository empleadoRepository;
+    private final EmpleadoRepository<Employes> empleadoRepository;
 
 
     public List<Employes> getall() {

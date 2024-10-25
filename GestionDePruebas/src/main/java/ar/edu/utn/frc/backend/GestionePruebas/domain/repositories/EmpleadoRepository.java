@@ -4,11 +4,11 @@ import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
 
 import java.util.List;
 
-public interface EmpleadoRepository {
+public interface EmpleadoRepository<T> {
 
-    List<Employes> getall();
-    Employes getid(int id);
-    void create(Employes employes);
+    List<T> getall();
+    T getid(int id);
+    void create(T employes);
     void delete(int id);
-    void update( Employes employes);
+    void update( T employes);
 }

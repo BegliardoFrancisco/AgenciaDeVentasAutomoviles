@@ -1,50 +1,49 @@
 package ar.edu.utn.frc.backend.GestionePruebas.infraestructure.repositories;
 
 import ar.edu.utn.frc.backend.GestionePruebas.domain.repositories.EmpleadoRepository;
-import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.DAOs.EmpleadoDAO;
+import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.DAOs.EmployesDAO;
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Component
-public class EmpleadoRepositoryImpl implements EmpleadoRepository {
+public class EmployesRepositoryImpl implements EmpleadoRepository<Employes> {
 
-    private final EmpleadoDAO empleadoDAO;
+    private final EmployesDAO employesDAO;
 
-    public EmpleadoRepositoryImpl(EmpleadoDAO dao) {
-        this.empleadoDAO = dao;
+    public EmployesRepositoryImpl(EmployesDAO dao) {
+        this.employesDAO = dao;
     }
 
 
     @Override
     public List<Employes> getall() {
-        return this.empleadoDAO.findAll();
+        return this.employesDAO.findAll();
     }
 
     @Override
     public Employes getid(int id) {
-        return this.empleadoDAO.findById(id).orElseThrow();
+        return this.employesDAO.findById(id).orElseThrow();
     }
 
     @Override
     public void create(Employes employes) {
-        this.empleadoDAO.save(employes);
+        this.employesDAO.save(employes);
     }
 
     @Override
     public void delete(int id) {
 
-        this.empleadoDAO.deleteById(id);
+        this.employesDAO.deleteById(id);
 
     }
 
     @Override
     public void update(Employes employes) {
 
-        this.empleadoDAO.save(employes);
+        this.employesDAO.save(employes);
     }
 }
