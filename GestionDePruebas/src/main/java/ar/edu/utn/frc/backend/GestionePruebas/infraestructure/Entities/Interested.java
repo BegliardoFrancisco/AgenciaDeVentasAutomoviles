@@ -21,9 +21,9 @@ public class Interested {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     @Column(name = "TIPO_DOCUMENTO")
-    int typeDocument;
+    String typeDocument;
     @Column(name = "DOCUMENTO")
-    int nroDocument;
+    String nroDocument;
     @Column(name = "NOMBRE")
     String name;
     @Column(name = "APELLIDO")

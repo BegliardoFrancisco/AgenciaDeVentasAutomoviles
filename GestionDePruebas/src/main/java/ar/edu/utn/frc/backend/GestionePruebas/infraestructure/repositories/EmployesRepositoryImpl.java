@@ -3,21 +3,16 @@ package ar.edu.utn.frc.backend.GestionePruebas.infraestructure.repositories;
 import ar.edu.utn.frc.backend.GestionePruebas.domain.repositories.EmpleadoRepository;
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.DAOs.EmployesDAO;
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
-@Slf4j
+
 @Component
+@RequiredArgsConstructor
 public class EmployesRepositoryImpl implements EmpleadoRepository<Employes> {
 
     private final EmployesDAO employesDAO;
-
-    public EmployesRepositoryImpl(EmployesDAO dao) {
-        this.employesDAO = dao;
-    }
-
 
     @Override
     public List<Employes> getall() {
