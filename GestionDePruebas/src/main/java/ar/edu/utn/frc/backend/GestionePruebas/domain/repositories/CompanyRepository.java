@@ -6,8 +6,8 @@ public interface CompanyRepository<T>{
 
     List<T> getall();
     T getid(int id);
-    void create(T Company);
+    void create(T company);
     void delete(int id);
-    void update( T Company);
+    void update( T company);
 
 }
