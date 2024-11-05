@@ -17,9 +17,9 @@ public class Position {
     @Column(name = "ID")
     int id;
 
-    @Column(name = "id_vehicle")
+
     @OneToOne
-            @JoinColumn(name = "id_vehicle")
+            @JoinColumn(name = "ID_VEHICULO")
     Vehicle vehicle;
 
     @Column(name = "FECHA_HORA")

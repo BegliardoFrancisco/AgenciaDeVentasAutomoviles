@@ -13,4 +13,5 @@ public class EmployedRequest {
     String surname;
 
     Integer phoneContact;
+
 }

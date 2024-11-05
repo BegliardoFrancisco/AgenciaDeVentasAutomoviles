@@ -22,10 +22,10 @@ public class Vehicle {
     String patent;
 
 
-    @OneToOne
-            @JoinColumn(name="models_id")
+    @OneToOne(mappedBy = "vehicle")
+            @JoinColumn(name = "ID_MODELO")
     Models models;
 
     @Column(name = "ANIO")
-    int año;
+    int anio;
 }

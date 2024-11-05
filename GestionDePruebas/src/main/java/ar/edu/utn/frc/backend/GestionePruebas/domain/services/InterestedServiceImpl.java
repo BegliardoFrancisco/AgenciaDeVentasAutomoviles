@@ -1,7 +1,7 @@
 package ar.edu.utn.frc.backend.GestionePruebas.domain.services;
 
 import ar.edu.utn.frc.backend.GestionePruebas.domain.repositories.InterestedRepository;
-import ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces.InterestesService;
+import ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces.InterestedService;
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Interested;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,9 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-@Service
+
 @AllArgsConstructor
-public class InterestedServiceImpl implements InterestesService<Interested> {
+@Service
+public class InterestedServiceImpl implements InterestedService<Interested> {
 
     private final InterestedRepository<Interested> interestedRepository;
 

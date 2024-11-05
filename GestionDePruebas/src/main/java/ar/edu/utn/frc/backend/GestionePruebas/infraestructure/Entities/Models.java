@@ -17,11 +17,13 @@ public class Models {
     int id;
 
     @ManyToOne
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "ID_MARCA")
     Company company;
 
     @Column(name = "DESCRIPCION")
     String description;
+
+
 
 
 

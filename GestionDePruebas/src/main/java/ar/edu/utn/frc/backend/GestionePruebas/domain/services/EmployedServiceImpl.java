@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 
 @RequiredArgsConstructor
 @Service
-public class EmpleadoServiceImpl implements EmpleadoService<Employes> {
+public class EmployedServiceImpl implements EmpleadoService<Employes> {
 
     private final EmpleadoRepository<Employes> empleadoRepository;
 
