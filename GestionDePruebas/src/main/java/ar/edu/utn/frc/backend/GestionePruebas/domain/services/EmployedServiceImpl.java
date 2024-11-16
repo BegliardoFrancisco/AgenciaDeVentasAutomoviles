@@ -1,7 +1,7 @@
 package ar.edu.utn.frc.backend.GestionePruebas.domain.services;
 
 import ar.edu.utn.frc.backend.GestionePruebas.domain.repositories.EmpleadoRepository;
-import ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces.EmpleadoService;
+import ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces.EmployedService;
 import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 
 @RequiredArgsConstructor
 @Service
-public class EmployedServiceImpl implements EmpleadoService<Employes> {
+public class EmployedServiceImpl implements EmployedService<Employes> {
 
     private final EmpleadoRepository<Employes> empleadoRepository;
 

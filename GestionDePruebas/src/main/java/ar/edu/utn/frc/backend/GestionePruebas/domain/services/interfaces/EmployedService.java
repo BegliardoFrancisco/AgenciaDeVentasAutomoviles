@@ -1,10 +1,8 @@
 package ar.edu.utn.frc.backend.GestionePruebas.domain.services.interfaces;
 
-import ar.edu.utn.frc.backend.GestionePruebas.infraestructure.Entities.Employes;
-
 import java.util.List;
 
-public interface EmpleadoService<T>  {
+public interface EmployedService<T>  {
 
     public List<T> getall();
     public T getid(Integer id);
